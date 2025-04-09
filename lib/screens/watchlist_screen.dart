@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'stock_detail_screen.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -67,20 +68,20 @@ class _HomeScreenState extends State<HomeScreen> {
   // BottomNavigationBar 아이템
   final List<BottomNavigationBarItem> _bottomNavItems = const [
     BottomNavigationBarItem(
-      icon: Icon(Icons.home),
+      icon: Icon(LucideIcons.home),
       label: '홈',
     ),
     BottomNavigationBarItem(
-      icon: Icon(Icons.star_border),
+      icon: Icon(LucideIcons.heart),
       label: '관심',
     ),
     BottomNavigationBarItem(
-      icon: Icon(Icons.explore),
-      label: '발견',
+      icon: Icon(LucideIcons.compass),
+      label: '탐색',
     ),
     BottomNavigationBarItem(
-      icon: Icon(Icons.feed),
-      label: '피드',
+      icon: Icon(LucideIcons.user),
+      label: '마이',
     ),
   ];
 
