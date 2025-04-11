@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/watchlist_screen.dart';
+import 'package:invisiblehand/screens/screens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.grey.shade100,
       ),
-      home: const HomeScreen(),
+      home: const BaseScreen(),
     );
   }
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+      #chart {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chart"></div>
+    <script>
+      const chart = LightweightCharts.createChart(document.getElementById('chart'), {
+        width: window.innerWidth,
+        height: window.innerHeight,
+        layout: {
+          backgroundColor: '#ffffff',
+          textColor: '#000',
+        },
+        grid: {
+          vertLines: { color: '#eee' },
+          horzLines: { color: '#eee' },
+        },
+        crosshair: {
+          mode: 0,
+        },
+        priceScale: {
+          borderVisible: false,
+        },
+        timeScale: {
+          borderVisible: false,
+        },
+      });
+
+      const candleSeries = chart.addCandlestickSeries();
+      candleSeries.setData([
+        { time: '2024-04-01', open: 100, high: 110, low: 90, close: 105 },
+        { time: '2024-04-02', open: 105, high: 115, low: 100, close: 110 },
+        { time: '2024-04-03', open: 110, high: 120, low: 105, close: 115 }
+      ]);
+    </script>
+  </body>
+</html>
